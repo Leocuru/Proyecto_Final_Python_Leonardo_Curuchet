@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tienda de Juegos Infantiles</title>
+</head>
+<body>
+    <header>
+        <h1>Tienda de Juegos Infantiles</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'index' %}">Inicio</a></li>
+                <li><a href="{% url 'crear_juego' %}">Crear Juego</a></li>
+                <li><a href="{% url 'buscar_juego' %}">Buscar Juego</a></li>
+                <li><a href="{% url 'crear_pedido' %}">Crear Pedido</a></li>
+                <li><a href="{% url 'registro_usuario' %}">Registro Usuario</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        <!-- Información del pie de página -->
+    </footer>
+</body>
+</html>
+
