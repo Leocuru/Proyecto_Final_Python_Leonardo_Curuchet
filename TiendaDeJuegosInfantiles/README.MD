@@ -9,29 +9,29 @@ Este proyecto es una aplicación web de una tienda de juegos infantiles desarrol
    - Descripción: Página de bienvenida de la tienda de juegos.
 
 2. **Crear Juego**:
-   - URL: `/crear_juego/`
+   - URL: `http://127.0.0.1:8000/crear_juego/`
    - Descripción: Formulario para crear un nuevo juego con campos de nombre, edad recomendada y descripción.
 
 3. **Buscar Juego**:
-   - URL: `/buscar_juego/`
+   - URL: `http://127.0.0.1:8000/buscar_juego/`
    - Descripción: Formulario para buscar juegos por nombre, ID o rango de edades.
 
 4. **Crear Pedido**:
-   - URL: `/pedir_juego/`
+   - URL: `http://127.0.0.1:8000/pedir_juego/`
    - Descripción: Formulario para realizar un pedido de un juego específico.
 
 5. **Registro Usuario**:
-   - URL: `/pedir_juego/`
+   - URL: `http://127.0.0.1:8000/registro_usuario/`
    - Descripción: Formulario para registrarse como ususario de la tienda.
 
 
 ## Orden de Prueba de Funcionalidades
 
-1. **Página Principal**: Visitar la URL `/` para ver la página de bienvenida.
-2. **Crear Juego**: Visitar la URL `/crear_juego/`, completar el formulario y enviar para crear un nuevo juego.
-3. **Buscar Juego**: Visitar la URL `/buscar_juego/`, utilizar los campos de búsqueda y enviar para buscar juegos.
-4. **Crear Pedido**: Visitar la URL `/pedir_juego/`, seleccionar un juego y completar el formulario de pedido.
-5. **Registro Usuario**: Visitar la URL `/pedir_juego/`, registrate como usuario de la tienda.
+1. **Página Principal**: Visitar la URL `http://127.0.0.1:8000/` para ver la página de bienvenida.
+2. **Crear Juego**: Visitar la URL `http://127.0.0.1:8000/crear_juego/`, completar el formulario y enviar para crear un nuevo juego.
+3. **Buscar Juego**: Visitar la URL `http://127.0.0.1:8000/buscar_juego/`, utilizar los campos de búsqueda y enviar para buscar juegos.
+4. **Crear Pedido**: Visitar la URL `http://127.0.0.1:8000/pedir_juego/`, seleccionar un juego y completar el formulario de pedido.
+5. **Registro Usuario**: Visitar la URL `http://127.0.0.1:8000/registro_usuario/`, registrate como usuario de la tienda.
 
 ## Ubicación de las Funcionalidades
 

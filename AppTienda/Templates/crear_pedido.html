@@ -7,7 +7,7 @@
     {% csrf_token %}
     <label for="juego">Juego:</label>
     <select id="juego" name="juego" required>
-        {% for juego in juegos %}
+        {% for juego in juegos_disponibles %}
             <option value="{{ juego.id }}">{{ juego.nombre }}</option>
         {% endfor %}
     </select>
