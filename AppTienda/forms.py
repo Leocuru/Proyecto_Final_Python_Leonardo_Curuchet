@@ -9,9 +9,11 @@ class UsuarioForm(forms.ModelForm):
 class JuegoForm(forms.ModelForm):
     class Meta:
         model = Juego
-        fields = ['nombre', 'descripcion', 'precio']
+        fields = ['nombre', 'edad_recomendada', 'descripcion']
 
 class PedidoForm(forms.ModelForm):
     class Meta:
         model = Pedido
-        fields = ['usuario', 'juegos']
+        fields = ['usuario', 'juego']
+        exclude = ['fecha_pedido']
+

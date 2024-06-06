@@ -2,23 +2,22 @@
 
 {% block content %}
 <h2>Buscar Juego</h2>
-<form method="get">
+<form method="GET" action="{% url 'buscar_juego' %}">
     <label for="nombre">Nombre:</label>
     <input type="text" id="nombre" name="nombre">
-    <br>
     <label for="id">ID:</label>
-    <input type="number" id="id" name="id" min="1">
-    <br>
+    <input type="text" id="id" name="id">
     <label for="rango_edades">Rango de Edades:</label>
-    <select id="rango_edades" name="rango_edades">
-        <option value="">Seleccionar</option>
-        <option value="0-3">0-3 años</option>
-        <option value="4-6">4-6 años</option>
-        <option value="7-9">7-9 años</option>
-        <option value="10-12">10-12 años</option>
-        <option value="13+">13+ años</option>
-    </select>
-    <br>
+    <input type="text" id="rango_edades" name="rango_edades" placeholder="ej. 4-6">
     <button type="submit">Buscar</button>
 </form>
+
+<ul>
+    {% for juego in juegos %}
+        <li>{{ juego.nombre }} - Edad Recomendada: {{ juego.edad_recomendada }}</li>
+    {% empty %}
+        <li>No se encontraron juegos</li>
+    {% endfor %}
+</ul>
 {% endblock %}
+
