@@ -1,6 +1,6 @@
 /* Custom styles */
 body {
-  background-color: #baf266; /* Fondo blanco para el cuerpo de la página */
+  background-color: #499ef2; /* Fondo blanco para el cuerpo de la página */
   color: #212529;
   font-family: 'Lato', sans-serif; /* Cambiar la fuente predeterminada */
   font-size: 40px; /* Tamaño de fuente base */
@@ -44,3 +44,64 @@ body {
   color: #e17528; /* Cambio a azul al pasar el mouse por encima */
   font-size: 40px;
 }
+
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+    /* Estilos para mejorar la legibilidad y el tamaño de los elementos */
+    form {
+        max-width: 600px;
+        margin: auto;
+    }
+    label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+    input[type=text],
+    input[type=number],
+    textarea {
+        width: 100%;
+        padding: 8px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-bottom: 10px;
+    }
+    button[type=submit] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 18px;
+    }
+    button[type=submit]:hover {
+        background-color: #45a049;
+    }
+</style>
+
+<h2>Crear Juego</h2>
+<form method="post">
+    {% csrf_token %}
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" required>
+    <br>
+    <label for="edad_recomendada">Edad Recomendada:</label>
+    <input type="number" id="edad_recomendada" name="edad_recomendada" min="0" required>
+    <br>
+    <label for="objetivo">Objetivo del Juego:</label>
+    <textarea id="objetivo" name="objetivo" rows="4" required></textarea>
+    <br>
+    <label for="materiales">Materiales Necesarios:</label>
+    <textarea id="materiales" name="materiales" rows="4" required></textarea>
+    <br>
+    <label for="instrucciones">Instrucciones de Juego:</label>
+    <textarea id="instrucciones" name="instrucciones" rows="8" required></textarea>
+    <br>
+    <button type="submit">Guardar Juego</button>
+</form>
+{% endblock %}

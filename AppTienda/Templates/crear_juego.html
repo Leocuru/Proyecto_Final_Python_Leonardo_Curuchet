@@ -1,18 +1,21 @@
+<!-- crear_juego.html -->
 {% extends 'base.html' %}
 
 {% block content %}
+<style>
+    /* Estilos adicionales si los necesitas */
+    .form-control {
+        /* Estilos para form-control si es necesario */
+    }
+    .form-control-file {
+        /* Estilos para form-control-file si es necesario */
+    }
+</style>
+
 <h2>Crear Juego</h2>
-<form method="post">
+<form method="post" enctype="multipart/form-data">
     {% csrf_token %}
-    <label for="nombre">Nombre:</label>
-    <input type="text" id="nombre" name="nombre" required>
-    <br>
-    <label for="edad_recomendada">Edad Recomendada:</label>
-    <input type="number" id="edad_recomendada" name="edad_recomendada" min="0" required>
-    <br>
-    <label for="descripcion">Descripción:</label>
-    <textarea id="descripcion" name="descripcion" required></textarea>
-    <br>
-    <button type="submit">Guardar</button>
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-primary">Guardar Juego</button>
 </form>
 {% endblock %}

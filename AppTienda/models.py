@@ -12,6 +12,7 @@ class Juego(models.Model):
     nombre = models.CharField(max_length=100)
     edad_recomendada = models.IntegerField(default=0)
     descripcion = models.TextField()
+    materiales = models.TextField()  # Campo para los materiales necesarios
 
     def __str__(self):
         return self.nombre
