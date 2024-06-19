@@ -7,14 +7,14 @@ def index(request):
 
 def crear_juego(request):
     if request.method == 'POST':
-        form = JuegoForm(request.POST, request.FILES)  # Incluir request.FILES para manejar archivos
+        form = JuegoForm(request.POST, request.FILES)
         if form.is_valid():
-            juego = form.save(commit=False)  # Guardar el formulario pero sin commit para manejar la imagen
-            juego.imagen = form.cleaned_data['imagen']  # Asignar la imagen
-            juego.save()  # Guardar el objeto Juego con la imagen asignada
-            return redirect('index')  # Redireccionar a la página principal u otra página de confirmación
+            juego = form.save(commit=False)  
+            juego.imagen = form.cleaned_data['imagen']  
+            juego.save()  
+            return redirect('index')
     else:
-        form = JuegoForm()  # Formulario vacío para mostrar al principio
+        form = JuegoForm()  
     return render(request, 'crear_juego.html', {'form': form})
 
 def crear_pedido(request):
