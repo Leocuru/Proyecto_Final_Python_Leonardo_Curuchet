@@ -124,7 +124,6 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'AppTienda', 'static'),
-    # Otros directorios si es necesario
 ]
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')

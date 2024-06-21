@@ -1,6 +1,6 @@
 from django.test import TestCase
 from django.urls import reverse
-from .models import Juego  # Asegúrate de importar tus modelos adecuadamente
+from .models import Juego
 
 class JuegoModelTestCase(TestCase):
     def setUp(self):
