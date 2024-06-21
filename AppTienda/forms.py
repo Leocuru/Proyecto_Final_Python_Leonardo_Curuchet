@@ -1,5 +1,5 @@
 from django import forms
-from .models import Usuario, Juego, Pedido
+from .models import Usuario, Juego
 
 class UsuarioForm(forms.ModelForm):
     class Meta:
@@ -23,9 +23,8 @@ class JuegoForm(forms.ModelForm):
         self.fields['imagen'].widget.attrs.update({'class': 'form-control-file'})
         self.fields['materiales'].widget.attrs.update({'class': 'form-control', 'rows': 4, 'placeholder': 'Detalla los materiales necesarios'})
     
-class PedidoForm(forms.ModelForm):
-    class Meta:
-        model = Pedido
-        fields = ['usuario', 'juego']
-        exclude = ['fecha_pedido']
-
+class BuscarJuegoForm(forms.Form):
+    nombre = forms.CharField(max_length=100, required=False)
+    edad_recomendada = forms.IntegerField(required=False)
+    rango_edades = forms.CharField(max_length=7, required=False)
+    materiales = forms.CharField(max_length=255, required=False)

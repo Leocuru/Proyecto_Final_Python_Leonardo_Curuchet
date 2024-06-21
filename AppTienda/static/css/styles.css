@@ -1,13 +1,13 @@
 /* Custom styles */
 body {
-  background-color: #499ef2; /* Fondo blanco para el cuerpo de la página */
+  background-color: #9bb4cc; /* Fondo blanco para el cuerpo de la página */
   color: #212529;
   font-family: 'Lato', sans-serif; /* Cambiar la fuente predeterminada */
-  font-size: 40px; /* Tamaño de fuente base */
+  font-size: 30px; /* Tamaño de fuente base */
 }
 
 .navbar {
-  background-color: #939598 !important; /* Fondo gris claro para la barra de navegación */
+  background-color: #9bb4cc !important; /* Fondo gris claro para la barra de navegación */
 }
 
 .navbar .navbar-brand {
@@ -27,7 +27,7 @@ body {
   position: relative;
   bottom: 0;
   width: 100%;
-  background-color: #499ef2; /* Fondo gris claro para el pie de página */
+  background-color: #9bb4cc; /* Fondo gris claro para el pie de página */
   padding: 40px 0; /* Espaciado interno en el pie de página */
   text-align: center; /* Centra el contenido del footer */
   font-size: 40px;
